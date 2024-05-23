@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-App</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-image: url('./pexels-pixabay-209831.jpg');
+        background-size: cover;
+    }
+    h1{
+        font-family: "Ubuntu Sans Mono", monospace;
+        font-size: 100px;
+        color: rgb(255, 255, 255, 0.613);
+    }
+    .Container{
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(0, 0, 0, 0.519);
+        align-items: center;
+        padding: 10px;
+        border-radius: 25px;
+    }
+
+    .input-btn{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    input{
+        font-size: 17px;
+        padding: 10px;
+        padding-left: 20px;
+        border-radius: 35px;
+        border: none;
+        outline: none;
+        font-family: "Ubuntu Sans Mono", monospace;
+        width: 85%;
+    }
+
+    input:hover, input:focus{
+        box-shadow: 0 0 10px 0;
+    }
+
+    button{
+        height: 37px;
+        width: 45px;
+        font-size: 10px;
+        font-family: "Ubuntu Sans Mono", monospace;
+        border-radius: 25px;
+        margin-left: 10px;
+        border: none;
+        background-color: white;
+    }
+
+    button:hover{
+        cursor: pointer;
+        background-color: black;
+        color: white;
+    }
+
+    #city-error{
+        text-align: left;
+        width: 100%;
+        padding-left: 40px;
+        color: red;
+        margin-top: 5px;
+        display: none;
+    }
+
+    #weathercard{
+        display: flex;
+        align-items: center;
+        display:none;
+    }
+
+    #weathercard img{
+        width: 170px;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+
+    #placetemp{
+        color: yellow;
+        font-size: 30px;
+        font-family: "Ubuntu Sans Mono", monospace;
+        font-weight: 700;
+    }
+
+    #weathertype{
+        color: gray;
+        font-family: "Ubuntu Sans Mono", monospace;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    #displaycityname{
+        color: white;
+        font-family: "Ubuntu Sans Mono", monospace;
+        font-size: 20px;
+        font-weight: 500;
+    }
+</style>
+<body>
+    <h1>Weather App</h1>
+    <div class="Container">
+        <div class = "input-btn">
+            <input
+            id = "mycity"
+            placeholder="Enter a City"
+            />
+            <button onclick="citysubmit()">Enter</button>
+        </div>
+        <p id = "city-error">Enter Name of the city</p>
+        <div id = "weathercard">
+            <img src = "./icons/sun.png"
+            id = "weather-type-img">
+            <div class = "subdiv">
+                <div>
+                    <p id = "placetemp">25 °C</Colgroup></p>
+                </div>
+                <div>
+                    <p id = "weathertype">Rain</p>
+                </div>
+                <p id = "displaycityname">Chennai</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src = "script.js"></script>
+</html>
